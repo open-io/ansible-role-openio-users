@@ -1,16 +1,27 @@
-# roles/ROLENAME/defaults/main.yml
+# roles/users/defaults/main.yml
 ---
-openio_ROLENAME_namespace: "OPENIO"
-openio_ROLENAME_serviceid: "0"
+# Add users
+openio_users_add:
+  - username: openio
+    uid: 120
+    name: openio account
+    group:
+    groups: []
+    home_create: true
+    shell: /bin/bash
+openio_users_home: /home
+openio_users_home_mode: "0750"
+# By default, user's primary group
+openio_users_group:
+openio_users_ssh_key_type: rsa
+openio_users_ssh_key_bits: 2048
+openio_users_authorized_keys_exclusive: false
 
-openio_ROLENAME_gridinit_dir: "/etc/gridinit.d/{{ openio_ROLENAME_namespace }}"
-openio_ROLENAME_gridinit_file_prefix: ""
+# secondary groups
+openio_users_groups:
+  - groupname: openio
+    gid: 220
 
-#openio_ROLENAME_bind_interface: "{{ ansible_default_ipv4.alias }}"
-#openio_ROLENAME_bind_address:
-#  "{{ hostvars[inventory_hostname]['ansible_' + openio_ROLENAME_bind_interface]['ipv4']['address'] }}"
-
-#openio_ROLENAME_volume: "/var/lib/oio/sds/{{ openio_ROLENAME_namespace }}/ROLENAME-{{ openio_ROLENAME_serviceid }}"
-openio_ROLENAME_provision_only: false
-openio_ROLENAME_location: "{{ ansible_hostname }}.{{ openio_ROLENAME_serviceid }}"
+# Remove users
+openio_users_remove: []
 ...

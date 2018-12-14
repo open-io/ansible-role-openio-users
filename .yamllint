@@ -41,7 +41,7 @@ rules:
     max-end: 0
   empty-values:
     level: error
-    forbid-in-block-mappings: true
+    forbid-in-block-mappings: false
     forbid-in-flow-mappings: true
   hyphens:
     level: error
