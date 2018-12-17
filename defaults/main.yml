@@ -5,7 +5,7 @@ openio_users_add:
   - username: openio
     uid: 120
     name: openio account
-    group:
+    group: openio
     groups: []
     home_create: true
     shell: /bin/bash
