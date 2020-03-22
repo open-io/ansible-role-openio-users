@@ -3,7 +3,7 @@
 # Add users
 openio_users_add:
   - username: openio
-    uid: 120
+    uid: "{{ openio_user_openio_uid | d('120') | int }}"
     name: openio account
     group: openio
     groups: []
@@ -20,7 +20,7 @@ openio_users_authorized_keys_exclusive: false
 # secondary groups
 openio_users_groups:
   - groupname: openio
-    gid: 220
+    gid: "{{ openio_group_openio_gid | d('220') | int }}"
 
 # Remove users
 openio_users_remove: []
