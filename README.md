@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/open-io/ansible-role-openio-users.svg?branch=master)](https://travis-ci.org/open-io/ansible-role-openio-users)
+[![Build Status](https://travis-ci.org/open-io/ansible-role-openio-users.svg?branch=20.04)](https://travis-ci.org/open-io/ansible-role-openio-users)
 # Ansible role `users`
 
 An Ansible role to manage system users. Specifically, the responsibilities of this role are to:
